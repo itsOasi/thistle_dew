@@ -1,0 +1,137 @@
+body {
+	margin: 0;
+	color: #470c5c;
+	font-size: large;
+}
+#hero {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-items: stretch;
+}
+
+#caption {
+	width: 30em;
+}
+#title{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	left: 20%;
+}
+#content{
+	position: absolute;
+	width: 33vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	transition: width .25s;
+	right: 0px;
+}
+#content:hover {
+	width: 80%;
+}
+.hoverboi{
+	width: 33.4%;
+	transition: width .75s;
+	text-align: center;
+}
+.hoverboi > .section{
+	visibility: hidden;
+	transition: transform .75s;
+	float: right;
+	transform: scale(1%);
+	top: 0%;
+}
+.hoverboi:hover > .section{
+	visibility: visible;
+	transform: scale(100%);
+	padding: 1em;
+}
+.hoverboi:hover{
+	width: 200em;
+}
+.section_title{
+	transform: rotate(90deg);
+	margin-top: 5em;
+	float: left;
+	user-select: none;
+}
+@media screen and (max-width: 1000px) {
+	#hero{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 5em;
+		margin-top: 15%;
+	}
+	#title{
+		position: relative;
+		align-items: center;
+		gap: 1em;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+	}
+	#content{
+		position: relative;
+		height: 6em;
+		flex-direction: column;
+		transition: height .25s;
+		width: 80%;
+		margin: auto;
+	}
+	#caption{
+		width: 80%;
+	}
+	#content:hover {
+		height: 60vh;
+	}
+	#logo{
+		width: 10em;
+	}
+	.section_title{
+		transform: rotate(0deg);
+		margin: auto;
+		text-align: center;
+		float: none;
+	}
+	.hoverboi{
+		height: 3em;
+		width: 100%;
+		transition: height .5s;
+		text-align: center;
+	}
+	.hoverboi:hover{
+		height: min-content;
+		width: 100%;
+		max-height: 60vh;
+		top:0%;
+	}
+	.hoverboi > .section{
+		visibility: hidden;
+		float: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: transform .75s;
+		transform: scale(1%);
+	}
+	.hoverboi:hover > .section{
+		visibility: visible;
+		transform: scale(80%);
+	}
+	
+}
+#wirewraps {
+	background-color: #b87e38;
+	color: #edd1b0;
+}
+#photography {
+	background-color: #000;
+	color: #CCC;
+}
+#painting {
+	background-color: #a55;
+	color: rgb(230, 179, 179);
+}
